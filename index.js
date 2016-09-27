@@ -60,8 +60,18 @@ Session.prototype.request = function (meth, route) {
     this.options.before.call(this, test);
   }
 
+  test.exec = this.exec.bind(test);
+
   return test;
 };
+
+Session.prototype.exec = function () {
+  return new Promise(function (resolve, reject) {
+    this.end(function (error, res) {
+      error ? reject(error) : resolve(res);
+    });
+  }.bind(this));
+}
 
 methods.forEach(function (m) {
   Session.prototype[m] = function () {
