@@ -1,6 +1,6 @@
 {
   "name": "supertest-session",
-  "version": "2.0.1",
+  "version": "3.1.0",
   "description": "Cookie-based session persistence for Supertest",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,10 @@
     {
       "name": "Chris Young",
       "email": "cyoung@mobiquityinc.com"
+    },
+    {
+      "name": "Christoph Tavan",
+      "email": "dev@tavan.de"
     }
   ],
   "license": "MIT",
@@ -33,7 +37,7 @@
     "cookiejar": "^2.0.1",
     "methods": "^1.1.1",
     "object-assign": "^4.0.1",
-    "supertest": "^1.1.0"
+    "supertest": "^2.0.1"
   },
   "devDependencies": {
     "connect": "^3.2.0",
